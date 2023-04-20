@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "firstname": "Joel",
+        "middlename": "",
+        "lastname": "Hartse"
+    },
+    {
+        "id": 2,
+        "firstname": "Hannah",
+        "middlename": "P.",
+        "lastname": "Templer"
+    },
+    {
+        "id": 3,
+        "firstname": "Marguerite",
+        "middlename": "Z.",
+        "lastname": "Duras"
+    },
+    {
+        "id": 4,
+        "firstname": "Kingsley",
+        "middlename": "",
+        "lastname": "Amis"
+    },
+    {
+        "id": 5,
+        "firstname": "Fannie",
+        "middlename": "Peters",
+        "lastname": "Flagg"
+    },
+    {
+        "id": 6,
+        "firstname": "Camille",
+        "middlename": "Byron",
+        "lastname": "Paglia"
+    },
+    {
+        "id": 7,
+        "firstname": "Rainer",
+        "middlename": "Steel",
+        "lastname": "Rilke"
+    }
+]

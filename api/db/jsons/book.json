@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "title": "American Elf",
+        "isbn": "978-1-891830-85-3",
+        "price": 1000,
+        "currency": "PHP",
+        "publication_year": 2004,
+        "edition": "Book 2"
+    },
+    {
+        "id": 2,
+        "title": "Cosmoknights",
+        "isbn": "978-1-60309-454-2",
+        "price": 2000,
+        "currency": "PHP",
+        "publication_year": 2019,
+        "edition": "Book 1"
+    },
+    {
+        "id": 3,
+        "title": "Essex County",
+        "isbn": "978-1-60309-038-4",
+        "price": 500,
+        "currency": "PHP",
+        "publication_year": 1990
+    },
+    {
+        "id": 4,
+        "title": "Hey, Mister (Vol 1)",
+        "isbn": "978-1-891830-02-0",
+        "price": 1200,
+        "currency": "PHP",
+        "publication_year": 2000,
+        "edition": "After School Special"
+    },
+    {
+        "id": 5,
+        "title": "The Underwater Welder",
+        "isbn": "978-1-60309-398-9",
+        "price": 3000,
+        "currency": "PHP",
+        "publication_year": 2022
+    }
+]
