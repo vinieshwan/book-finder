@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   scope :api do
     resources :books, only: [:show]
+    get '/books/isbn_conversion/:id', to: 'books#isbn_conversion'
   end
 end

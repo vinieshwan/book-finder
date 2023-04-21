@@ -7,16 +7,16 @@ module BooksUseCases
     class ResourceNotFoundError < StandardError; end
 
     def initialize(id:)
-      @id = id
+      @id = id.strip
     end
 
-    def validate
-      Utils::Validator.isbn_13?(@id)
+    def valid?
+      Utils::Isbn.isbn_13?(@id)
     end
 
     # rubocop: todo Metrics/MethodLength
     def perform
-      raise InvalidParameterError if validate.nil?
+      raise InvalidParameterError unless valid?
       raise ResourceNotFoundError if book.empty?
 
       book
@@ -34,7 +34,9 @@ module BooksUseCases
     private
 
     def book
-      @book ||= Book.includes(:authors, :publishers).where(books: { isbn: @id })
+      isbn = @id.gsub(/[-\s]*/, '')
+
+      @book ||= Book.includes(:authors, :publishers).where('isbn ~* ?', @id.gsub(/[-\s]*/, "[#{isbn}\-]*"))
     end
   end
 end
