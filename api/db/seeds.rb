@@ -55,9 +55,11 @@ def create_book_author(book_authors)
     end
 end
 
-Author.delete_all
-Publisher.delete_all
-Book.delete_all
+# Author.delete_all
+# Publisher.delete_all
+# Book.delete_all
+# BookAuthor.delete_all
+# BookPublisher.delete_all
 
 create_publisher(load_data_from_json("#{__dir__}/jsons/publisher.json"))
 create_book(load_data_from_json("#{__dir__}/jsons/book.json"))
