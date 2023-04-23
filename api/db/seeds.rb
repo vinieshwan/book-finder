@@ -28,6 +28,7 @@ def create_book(books)
       currency: book['currency'],
       publication_year: book['publication_year'],
       edition: book['edition'],
+      image: book['image']
     )
   end
 end
@@ -54,12 +55,6 @@ def create_book_author(book_authors)
       BookAuthor.create(book_id: book_author['book_id'], author_id: book_author['author_id'])
     end
 end
-
-# Author.delete_all
-# Publisher.delete_all
-# Book.delete_all
-# BookAuthor.delete_all
-# BookPublisher.delete_all
 
 create_publisher(load_data_from_json("#{__dir__}/jsons/publisher.json"))
 create_book(load_data_from_json("#{__dir__}/jsons/book.json"))

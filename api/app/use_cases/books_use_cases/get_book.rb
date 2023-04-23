@@ -34,9 +34,7 @@ module BooksUseCases
     private
 
     def book
-      isbn = @id.gsub(/[-\s]*/, '')
-
-      @book ||= Book.includes(:authors, :publishers).where('isbn ~* ?', @id.gsub(/[-\s]*/, "[#{isbn}\-]*"))
+      @book ||= Book.includes(:authors, :publishers).where(isbn: @id)
     end
   end
 end

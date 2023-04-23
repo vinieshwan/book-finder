@@ -6,7 +6,8 @@
         "price": 1000,
         "currency": "PHP",
         "publication_year": 2004,
-        "edition": "Book 2"
+        "edition": "Book 2",
+        "image": "https://m.media-amazon.com/images/I/91trZREb98L.jpg"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "price": 2000,
         "currency": "PHP",
         "publication_year": 2019,
-        "edition": "Book 1"
+        "edition": "Book 1",
+        "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1624734807i/31553044._SY540_.jpg"
     },
     {
         "id": 3,
@@ -23,7 +25,8 @@
         "isbn": "978-1-60309-038-4",
         "price": 500,
         "currency": "PHP",
-        "publication_year": 1990
+        "publication_year": 1990,
+        "image": "https://www.hollywoodreporter.com/wp-content/uploads/2015/12/essex_county_cover_-_p_2015.jpg"
     },
     {
         "id": 4,
@@ -32,7 +35,8 @@
         "price": 1200,
         "currency": "PHP",
         "publication_year": 2000,
-        "edition": "After School Special"
+        "edition": "After School Special",
+        "image": "https://d1466nnw0ex81e.cloudfront.net/n_iv/600/1116035.jpg"
     },
     {
         "id": 5,
@@ -40,6 +44,7 @@
         "isbn": "978-1-60309-398-9",
         "price": 3000,
         "currency": "PHP",
-        "publication_year": 2022
+        "publication_year": 2022,
+        "image": "https://m.media-amazon.com/images/I/91+XkroXM0L._AC_UF1000,1000_QL80_.jpg"
     }
 ]

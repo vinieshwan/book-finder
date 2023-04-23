@@ -2,7 +2,7 @@
 
 # Books serializer
 class BookSerializer < ActiveModel::Serializer
-  attributes :id, :title, :isbn, :price, :currency, :publication_year, :edition, :publisher, :authors
+  attributes :id, :title, :isbn, :price, :currency, :publication_year, :edition, :image, :publisher, :authors
 
   def authors
     authors_list = object.authors.map do |author|

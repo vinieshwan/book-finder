@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+Header a, Header a:visited {
+  color: #151C55;
+  text-decoration: none;
+}
+
+a, a:visited {
+  color: #505f70;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.mantine-Accordion-content {
+  padding: 0;
+}
+
+img svg {
+  fill: red;
+}

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   scope :api do
     resources :books, only: [:show]
     get '/books/isbn_conversion/:id', to: 'books#isbn_conversion'
+    get '/books/which_isbn/:id', to: 'books#which_isbn'
   end
 end

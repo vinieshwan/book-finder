@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, createContext } from "react";
+import { Default } from "./layout/Default";
+
+export const IsbnContext = createContext();
 
 function App() {
+  const [isbn, setIsbn] = useState('');
+  const [book, setBook] = useState([]);
+  const [error, setError] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IsbnContext.Provider value={{isbn, setIsbn, book, setBook, error, setError}}>
+      <Default />
+    </IsbnContext.Provider>
   );
 }
 
