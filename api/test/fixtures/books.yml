@@ -2,7 +2,7 @@
 
 one:
   title: MyString
-  isbn: MyString
+  isbn: 978-1-891830-85-3
   price: 9.99
   currency: MyString
   publication_year: 1
