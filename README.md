@@ -18,5 +18,5 @@ Note: _This is developed and tested under Ruby 3.2.2 and Node 18.14.2_
 #### Homepage
 <img src="./homepage.png" />
 
-#### Search page
+#### Search result page
 <img src="./search-page.png" />
