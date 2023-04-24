@@ -39,7 +39,12 @@ export const Default = () => {
 
             setError('')
         } catch (err) {
-            setError(err)
+            if (typeof err !== 'string') {
+                setError('');
+            } else {
+                setError(err);
+            }
+            
         }
     }
 
