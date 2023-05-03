@@ -37,7 +37,7 @@ module Utils
         number = isbn_cleanup(isbn).drop(3)
         number.pop
 
-        checkdigit = 11 - isbn10_checkdigit(number)
+        checkdigit = (11 - isbn10_checkdigit(number)) % 11
 
         number.push(checkdigit == 10 ? 'X' : checkdigit)
 
@@ -48,9 +48,9 @@ module Utils
         number = isbn_cleanup("978#{isbn}")
         number.pop
 
-        checkdigit = 10 - isbn13_checkdigit(number)
+        checkdigit = (10 - isbn13_checkdigit(number)) % 10
 
-        number.push(checkdigit == 10 ? 0 : checkdigit)
+        number.push(checkdigit)
 
         hyphenate_isbn(number.join)
       end
@@ -82,7 +82,7 @@ module Utils
           when 0..99
             regex = /(\d)(\d{7})(\d)(\w)/
           end
-        when 1
+        when 1 # English speaking area
           case pe
           when 0...1000
             regex = /(\d)(\d{2})(\d{6})(\w)/
@@ -94,10 +94,10 @@ module Utils
             regex = /(\d)(\d{5})(\d{3})(\w)/
           when 0...9990
             regex = /(\d)(\d{6})(\d{2})(\w)/
-          when d4..9999
+          when pe..9999
             regex = /(\d)(\d{7})(\d)(\w)/
           end
-        when 2
+        when 2 # french speaking areas
           case re
           when 0...20
             regex = /(\d)(\d{2})(\d{6})(\w)/
@@ -112,10 +112,10 @@ module Utils
           when 0..99
             regex = /(\d)(\d{7})(\d)(\w)/
           end
-        when 9
-          d2 = group[2...4] if group[1...2].zero?
+        when 9 # Dutch/German speaking
+          re = group[2...4] if group[1...2].zero?
 
-          case d2
+          case re
           when 0...20
             regex = /(\d{2})(\d{2})(\d{5})(\w)/
           when 0...50
@@ -128,9 +128,9 @@ module Utils
             regex = /(\d{2})(\d{6})(\d)(\w)/
           end
 
-          d2 = group[3...5] if group[1...3] == 65
+          re = group[3...5] if group[1...3] == 65 #israel
 
-          case d2
+          case re
           when 0...20
             regex = /(\d{3})(\d{2})(\d{4})(\w)/
           when 0...70
@@ -141,9 +141,9 @@ module Utils
             regex = /(\d{3})(\d{5})(\d)(\w)/
           end
 
-          d2 = group[3...5] if group[1...3] == 81
+          re = group[3...5] if group[1...3] == 81 #singapore
 
-          case d2
+          case re
           when 0...20
             regex = /(\d{3})(\d{2})(\d{4})(\w)/
           when 0...30
